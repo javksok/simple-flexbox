@@ -1,1 +1,55 @@
-
+* {
+  /* reset all margins to 0 */
+  margin: 0;
+  /* count padding in element widths */
+  box-sizing: border-box;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+}
+header {
+  background-color: azure;
+  padding: 30px;
+  text-align: center;
+}
+footer {
+  background-color: cornflowerblue;
+  padding: 20px;
+  text-align: center;
+}
+img {
+    width: 100%;
+}
+#row {
+  /* use flexbox on the parent div to manage row or column */
+  display: flex;
+  /* use row for desktop and tablet, column for mobile */
+  flex-direction: row;
+  /* wrap is used to create new row lines */
+  flex-wrap: wrap;
+}
+.column {
+  /* flex 1 sets flex-grow to 1, flex-shrink to 1 and 
+        flex-basis to 1, meaning all child columns will have the same width */
+  flex: 1;
+  padding: 10px;
+}
+/* break point for tablet */
+@media screen and (max-width: 900px) {
+        .column{ 
+            min-width: 50%;
+        }
+    }
+/* breakpoint for mobile */
+@media screen and(max-width: 500px) {
+    .column{
+        min-width: 100%;
+    }
+    /* alternative approach */
+    
+}
